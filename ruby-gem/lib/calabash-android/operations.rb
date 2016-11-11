@@ -663,6 +663,8 @@ module Calabash module Android
           wake_up
         end
 
+        tries = 100
+        tries = options[:tries] unless options[:tries] == nil
         env_options = options.clone
         env_options.delete(:intent)
 
@@ -686,7 +688,7 @@ module Calabash module Android
         log cmd
         raise "Could not execute command to start test server" unless system("#{cmd} 2>&1")
 
-        Calabash::Android::Retry.retry :tries => 100, :interval => 0.1 do
+        Calabash::Android::Retry.retry :tries => tries, :interval => 0.1 do
           raise "App did not start" unless app_running?
         end
 
