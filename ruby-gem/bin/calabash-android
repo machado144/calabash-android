@@ -53,7 +53,6 @@ else
             print_help
         when 'build'
             require 'calabash-android/helpers'
-            require 'calabash-android/utils'
             require 'calabash-android/java_keystore'
             require 'calabash-android/env'
             require File.join(File.dirname(__FILE__), "calabash-android-build")
@@ -74,7 +73,6 @@ else
             end
         when 'run'
             require 'calabash-android/helpers'
-            require 'calabash-android/utils'
             require 'calabash-android/java_keystore'
             require 'calabash-android/env'
             require File.join(File.dirname(__FILE__), "calabash-android-run")
@@ -87,7 +85,6 @@ else
             end
         when 'gen'
             require 'calabash-android/helpers'
-            require 'calabash-android/utils'
             require 'calabash-android/java_keystore'
             require 'calabash-android/env'
             require File.join(File.dirname(__FILE__), "calabash-android-generate")
@@ -95,7 +92,6 @@ else
             calabash_scaffold
         when 'console'
             require 'calabash-android/helpers'
-            require 'calabash-android/utils'
             require 'calabash-android/java_keystore'
             require 'calabash-android/env'
             require File.join(File.dirname(__FILE__), "calabash-android-console")
@@ -108,7 +104,6 @@ else
             end
         when 'setup'
             require 'calabash-android/helpers'
-            require 'calabash-android/utils'
             require 'calabash-android/java_keystore'
             require 'calabash-android/env'
             require File.join(File.dirname(__FILE__), "calabash-android-setup")
@@ -116,7 +111,6 @@ else
             calabash_setup
         when 'resign'
             require 'calabash-android/helpers'
-            require 'calabash-android/utils'
             require 'calabash-android/java_keystore'
             require 'calabash-android/env'
 

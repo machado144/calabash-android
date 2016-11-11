@@ -158,7 +158,7 @@ module Calabash
         hash = {
           :event_name => "session",
           :data_version => DATA_VERSION,
-          :distinct_id => user_id
+          :user_id => user_id
         }
 
         if allowed == "system_info"
